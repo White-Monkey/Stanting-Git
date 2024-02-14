@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Starting Git</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <link rel="icon" href="img/favicon.ico">
+  <meta name="theme-color" content="#7952b3">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="css/sticky-footer.css" rel="stylesheet">
+
+  <script>
+    function copiarTexto() {
+      var gitInit = document.getElementById('gitInit').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitInit);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+
+    function copiarTexto2() {
+      var gitClone = document.getElementById('gitClone').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitClone);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+
+    function copiarTexto3() {
+      var gitAdd = document.getElementById('gitAdd').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitAdd);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+
+    function copiarTexto4() {
+      var gitMsg = document.getElementById('gitMsg').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitMsg);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+
+    function copiarTexto5() {
+      var gitPush = document.getElementById('gitPush').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitPush);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+
+    function copiarTexto6() {
+      var gitPull = document.getElementById('gitPull').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitPull);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+
+    function copiarTexto7() {
+      var gitBranch = document.getElementById('gitBranch').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitBranch);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+
+    function copiarTexto8() {
+      var gitCkt = document.getElementById('gitCkt').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitCkt);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+
+    function copiarTexto9() {
+      var gitMerge = document.getElementById('gitMerge').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitMerge);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+
+    function copiarTexto10() {
+      var gitStatus = document.getElementById('gitStatus').innerText;
+
+      var inputTemporario = document.createElement('input');
+      document.body.appendChild(inputTemporario);
+      inputTemporario.setAttribute('value', gitStatus);
+      inputTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemporario);
+
+      alert('Texto copiado com sucesso!');
+    }
+  </script>
+</head>
+
+<body class="d-flex flex-column h-100">
+
+  <!-- Begin page content -->
+  <main class="flex-shrink-0">
+    <div class="container">
+      <h1 class="mt-5">Starting Git</h1>
+      <p class="lead">Comandos essenciais do Git.</p>
+
+      <div>
+        <strong>
+          <p>1. Inicializar um repositório Git</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitInit">
+            <code>git init</code>
+            <i class="fas fa-copy" onclick="copiarTexto()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando cria um novo repositório Git local.</p>
+      </div>
+
+      <div>
+        <strong>
+          <p>2. Clonar um repositório Git</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitClone">
+            <code>git clone &lt;url&gt;</code>
+            <i class="fas fa-copy" onclick="copiarTexto2()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando copia um repositório Git existente.</p>
+      </div>
+
+      <div>
+        <strong>
+          <p>3. Adicionar arquivos ao índice</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitAdd">
+            <code>git add &lt;arquivo&gt;</code>
+            <i class="fas fa-copy" onclick="copiarTexto3()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando adiciona um arquivo ao índice para o próximo commit.</p>
+      </div>
+
+      <div>
+        <strong>
+          <p>4. Commitar suas mudanças</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitMsg">
+            <code>git commit -m "&lt;mensagem&gt;"</code>
+            <i class="fas fa-copy" onclick="copiarTexto4()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando grava as alterações no repositório.</p>
+      </div>
+
+      <div>
+        <strong>
+          <p>5. Push (enviar) suas mudanças</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitPush">
+            <code>git push &lt;remoto&gt;
+              &lt;ramo&gt;</code>
+            <i class="fas fa-copy" onclick="copiarTexto5()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando envia as alterações para o repositório remoto.</p>
+      </div>
+
+      <div>
+        <strong>
+          <p>6. Pull (buscar) atualizações</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitPull">
+            <code>git pull &lt;remoto&gt;
+              <ramo>
+            </code>
+            <i class="fas fa-copy" onclick="copiarTexto6()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando busca e integra as alterações do repositório remoto.</p>
+      </div>
+
+      <div>
+        <strong>
+          <p>7. Criar uma nova branch (ramificação)</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitBranch">
+            <code>git branch &lt;nome_da_branch&gt;</code>
+            <i class="fas fa-copy" onclick="copiarTexto7()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando cria uma nova branch.</p>
+      </div>
+
+      <div>
+        <strong>
+          <p>8. Mudar para uma branch existente</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitCkt">
+            <code>git checkout &lt;nome_da_branch&gt;</code>
+            <i class="fas fa-copy" onclick="copiarTexto8()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando muda para uma branch específica.</p>
+      </div>
+
+      <div>
+        <strong>
+          <p>9. Mesclar uma branch na branch atual</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitMerge">
+            <code>git merge &lt;nome_da_branch&gt;</code>
+            <i class="fas fa-copy" onclick="copiarTexto9()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando mescla a branch especificada na branch atual.</p>
+      </div>
+
+      <div>
+        <strong>
+          <p>10. Ver o status do repositório</p>
+        </strong>
+
+        <ol class="breadcrumb p-2 bg-body-tertiary rounded-2">
+          <li class="breadcrumb-item" id="gitStatus">
+            <code>git status</code>
+            <i class="fas fa-copy" onclick="copiarTexto10()"></i>
+          </li>
+        </ol>
+
+        <p class="lead">Este comando lista todos os arquivos modificados ou novos que ainda não foram commitados.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="text-muted">&copy; 2024 White Monkey by, <a href="https://github.com/mykaelandrade"
+          target="_blank">@mykaelandrade</a>.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
